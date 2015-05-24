@@ -13,44 +13,49 @@ These signals were used to estimate variables of the feature vector for each pat
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 tBodyAcc-XYZ
+
 tGravityAcc-XYZ
+
 tBodyAccJerk-XYZ
+
 tBodyGyro-XYZ
+
 tBodyGyroJerk-XYZ
+
 tBodyAccMag
+
 tGravityAccMag
+
 tBodyAccJerkMag
+
 tBodyGyroMag
+
 tBodyGyroJerkMag
+
 fBodyAcc-XYZ
+
 fBodyAccJerk-XYZ
+
 fBodyGyro-XYZ
+
 fBodyAccMag
+
 fBodyAccJerkMag
+
 fBodyGyroMag
+
 fBodyGyroJerkMag
 
-The set of variables that were estimated from these signals are: 
+**Modified** Only these variable extracted from original dataset:
 
 mean(): Mean value
+
 std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+
 angle(): Angle between to vectors.
 
-Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+
+**Quote** Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
 gravityMean
 tBodyAccMean
@@ -58,7 +63,24 @@ tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
 
-The complete list of variables of each feature vector is available in 'features.txt'
 
-## 
+## Variables details
+- 'dir' : current working directory
+- 'mainDir', 'trainDir', 'testDir' : file path for datasets
+- 'features' : list of measurement types from features.txt
+- 'activity_lables' : data frame index activity ID number and activities
+- 'X_test' : data frame read in from X_test.txt with column names from features, equivalent for X_train
+- 'y_test' : data frame read in from y_test.txt indicate activity ID for each x_test row, equivalent for y_train
+- 'sub_test' : data frame read in from sub_test.txt indicate subject ID for each x_test row, equivalent for sub_train
+- 'testMeasure' : data frame extract all mean and std measurement from x_test and merge with y_test and sub_test, quivalent for trainmeasure.
+- 'allMeasure' : data frame merged from test and train data and added activity column based on activity_labels
+- 'allMeasureTidy' : data frame calculate the average mean and std from allMeasure by each subject and each activity
+
+## Output tidy data columns
+- 'subID' : subject id number from file sub_test and sub_train
+- 'activity' : types of activities
+- 'actID' : original activity id number from file y_test and y_train
+- 'tBodyAcc-mean()-X' ... 'angle(Z,gravityMean)' : averaged mean and std from X_test and X_train by subject and activities
+
+## End of Codebook
 
