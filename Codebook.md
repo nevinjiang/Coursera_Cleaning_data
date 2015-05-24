@@ -72,7 +72,7 @@ tBodyGyroJerkMean
 - 'X_test' : data frame read in from X_test.txt with column names from features, equivalent for X_train
 - 'y_test' : data frame read in from y_test.txt indicate activity ID for each x_test row, equivalent for y_train
 - 'sub_test' : data frame read in from sub_test.txt indicate subject ID for each x_test row, equivalent for sub_train
-- 'testMeasure' : data frame extract all mean and std measurement from x_test and merge with y_test and sub_test, equivalent for trainmeasure.
+- 'testMeasure' : data frame extract all mean and std measurement from x_test and merge with y_test and sub_test, equivalent for trainMeasure.
 - 'allMeasure' : data frame merged from test and train data and added activity column based on activity_labels
 - 'allMeasureTidy' : data frame calculate the average mean and std from allMeasure by each subject and each activity
 
