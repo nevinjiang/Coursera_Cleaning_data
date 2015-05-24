@@ -73,4 +73,4 @@ The following files are available for the train and test data. Their description
 - 'actID' : original activity id number from file y_test and y_train
 - 'tBodyAcc-mean()-X' ... 'angle(Z,gravityMean)' : averaged mean and std from X_test and X_train by subject and activities
 
-
+## End of README
